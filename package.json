@@ -1,6 +1,6 @@
 {
-  "name": "@auth0/nextjs-auth0",
-  "version": "0.5.0",
+  "name": "faisalil-nextjs-auth0",
+  "version": "0.5.5",
   "description": "Next.js SDK for signing in with Auth0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -63,9 +63,13 @@ export default class CookieSessionStore implements ISessionStore {
    * @param req HTTP request
    */
   async save(req: IncomingMessage, res: ServerResponse, session: ISession): Promise<ISession> {
-    const { cookieSecret, cookieName, cookiePath, cookieLifetime } = this.settings;
+    const {
+      cookieSecret, cookieName, cookiePath, cookieLifetime
+    } = this.settings;
 
-    const { idToken, accessToken, refreshToken, user, createdAt, expiresAt } = session;
+    const {
+      idToken, accessToken, refreshToken, user, createdAt, expiresAt
+    } = session;
     const persistedSession = new Session(user, createdAt);
 
     if (this.settings.storeIdToken && idToken) {
